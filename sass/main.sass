@@ -1,0 +1,1025 @@
+$color-orange: #ff7757
+$font-rubik: 'Rubik', sans-serif
+$color-greylight: #767E86
+$color-darkblue: #172432
+$color-orangeligth: #FFE8D4
+
+@mixin planer
+            background-size: cover
+            width: 25%
+            height: 50% 
+            padding: 5% 2%
+            position: relative
+
+            &:before
+                content: ""
+                position: absolute
+                top: 0
+                left: 0
+                width: 100%
+                height: 100%
+                background-color: rgba(0, 0, 0, 0.8)
+                opacity: 0
+                transition: opacity 0.3s ease
+
+            &:hover:before
+                opacity: 1
+                
+
+            &-1
+                display: flex
+                justify-content: space-between
+                font-family: $font-rubik
+                position: relative
+                z-index: 1
+                color: #fff
+                                
+
+            &-2
+                display: flex
+                justify-content: space-between
+                font-family: $font-rubik
+                color: #fff
+                position: relative
+                z-index: 1
+
+                img
+                    width: 40%
+                    height: 20%
+
+            &-p
+                font-size: 2rem
+                text-align: center 
+                color: #fff
+                position: relative
+                z-index: 1               
+    
+    
+@mixin footerlist
+        width: 10%
+        font-weight: 300
+
+        p
+            font-weight: bold
+
+        ul
+            list-style: none
+            text-align: left
+            padding: 0 !important
+
+            a
+                text-decoration: none
+                color: #fff
+
+* 
+    margin: 0
+    padding: 0
+    box-sizing: border-box
+
+@mixin phone
+  @media (max-width: 425px)
+    @content
+
+@mixin tablet
+  @media (min-width: 426px) and (max-width: 980px)
+    @content
+
+body    
+    font-family: 'Playfair Display', serif
+    
+
+header 
+    position: relative
+    width: 100vw
+    height: 10vh
+
+nav     
+    position: relative
+    z-index: 2
+    top: 0
+    left: 0
+    width: 100%
+    background-color: transparent !important
+
+h2
+    font-size: 3rem
+
+hr
+    width: 10vw
+    color: $color-orange
+    height: 3px !important
+
+.btn__hover:hover
+    box-shadow: 2px 2px 3px rgba(0,0 ,0 ,.8 )
+    
+//NAV///////////////////////////////////////////////////////
+.navbar__nav
+
+    @include phone
+        height: 20%
+    
+    a
+        width: 20%
+        padding-left: 10%       
+
+    img
+            height: 110px
+            width: 110px            
+            border-radius: 12px
+            background-color: rgba(255,255 ,255 ,.8 )
+
+            @include phone
+                height: 50px
+                width: 50px
+
+    div
+        width: 60%
+        justify-content: center
+        padding-left: 10%
+        font-family: $font-rubik
+        font-size: 1.3rem
+        font-weight: 300        
+
+        ul
+            width: 70%
+            font-weight: 600
+            text-shadow: 2px 2px 3px rgba(0,0 ,0 ,.6 )
+
+        &:hover
+            color: red
+
+        form
+            width: 30%
+            justify-content: space-between
+            padding: 0% 10%
+
+            @include phone
+                width: 100%
+
+            button
+                width: 100%
+                color: #fff
+
+            .btn1
+                border: none
+
+                &:hover
+                    background-color: transparent
+
+            .btn2
+                background-color: $color-orange
+                border: none
+
+
+        .first
+            font-weight: 700
+            border-bottom: 2px solid $color-orange
+
+    button
+        width: 20%
+
+
+.color
+    a
+        color: #fff !important
+        justify-content: center
+        transition: .5s    
+
+.color li a:hover
+    color: $color-orange !important
+    text-shadow: -2px -2px 3px rgba(0,0 ,0 ,.7 ) !important
+
+.nav__ham
+
+    @include phone    
+        background-color: $color-greylight 
+        opacity: .9
+        position: relative
+        z-index: 10
+
+    @include tablet
+        background-color: $color-greylight 
+        opacity: .9
+        position: relative
+        z-index: 10
+
+        
+    
+//RESERVE////////////////////////////////////////////////////
+        
+.reserve
+    position: relative
+    z-index: 1
+    background-color: white
+    opacity: .9
+    width: 100vw
+    height: 15vh
+    margin-left: 0
+    border-top-right-radius: 20px
+    border-bottom-right-radius: 20px
+    display: flex
+    // margin-top: 15vh
+    padding: 0 0 0 8%   
+    width: 80%
+    justify-content: space-around  
+
+    @include phone
+        display: inline-block
+        height: 60vh
+        margin: 0
+        width: 70%
+        border-radius: 12px
+        padding: 0    
+        margin-left: 16.5vw
+
+    @include tablet
+        position: absolute
+        top: 70vh
+        height: fit-content
+        padding-left: 0%
+        padding-bottom: 2%
+        width: 100%
+        justify-content: start
+
+.reserve__destination
+    padding-top: 2% 
+    width: 22%
+    padding-right: 28%
+
+    @include phone
+        width: 100%
+        padding: 2% 10%
+
+    @include tablet
+        width: 18%
+        padding-left: 2%
+        padding-right: 28%
+
+    p
+        color: $color-greylight
+        text-transform: uppercase
+        
+    input
+        border-top: none
+        border-left: none
+        border-right: none
+        border-bottom: 1px solid $color-greylight
+        color: $color-greylight
+        font-family: $font-rubik
+        width: fit-content
+   
+
+.reserve__person
+    padding-top: 2%
+    width: 18%
+    padding-right: 3%
+
+    @include phone
+        width: 100%
+        padding: 2% 10%
+    
+    @include tablet
+        width: 12%
+        padding-right: 1%
+
+    p
+        color: $color-greylight
+        text-transform: uppercase  
+        padding-bottom: 3%
+
+    select
+        width: 100%
+        border-top: none
+        border-left: none
+        border-right: none
+        color: $color-greylight
+        font-family: $font-rubik  
+
+.reserve__checkin
+    padding-top: 2%
+    width: 23%
+
+    @include phone
+        width: 100%
+        padding: 2% 10%
+
+    p
+        color: $color-greylight
+        text-transform: uppercase
+
+    input
+        border-top: none
+        border-left: none
+        border-right: none
+        border-bottom: 1px solid $color-greylight
+        color: $color-greylight
+        font-family: $font-rubik
+
+
+.reserve__checkout
+    padding-top: 2%
+    width: 23%
+
+    @include phone
+        @include phone
+            width: 100%
+            padding: 2% 10%
+
+    p
+        color: $color-greylight
+        text-transform: uppercase
+
+    input
+        border-top: none
+        border-left: none
+        border-right: none
+        border-bottom: 1px solid $color-greylight
+        color: $color-greylight
+        font-family: $font-rubik
+
+.reserve__book
+    width: 14%
+    display: flex
+    justify-content: center
+    align-content: center
+    align-items: center
+    background-color: $color-orange
+    border-top-right-radius: 12px
+    border-bottom-right-radius: 12px    
+    color: #fff
+    text-transform: uppercase
+    font-size: 1.5rem
+    padding-left: 1%
+
+    @include phone
+            width: 100%
+            border-radius: 0 0 12px 12px
+            padding: 6% 0% 6% 0
+            margin-top: 11%
+            position: absolute
+            bottom: 0
+
+    @include tablet
+        position: absolute
+        right: 0
+        height: 100%
+
+    &:after
+        content: url('../img/Arrow 1.svg')
+        padding-right: 10%        
+        justify-content: center
+        align-content: center
+        align-items: center
+
+        @include phone
+            padding: 3% 0% 0% 8%
+
+    &:hover
+        box-shadow: 2px 2px 4px rgba(0,0 ,0 ,.7 )
+
+    a
+        text-decoration: none
+        color: #fff
+
+    
+
+//FRONT////////////////////////////////////////////////////////////////////////////
+
+.front__title
+    position: relative
+    z-index: 1
+    margin-top: 25vh
+    padding-left: 10%
+    color: #fff
+    width: 60vw
+
+    @include phone   
+        margin-top: 0
+
+    @include tablet 
+        margin-top: 0
+
+    h1
+        font-size: 4rem
+        text-shadow: 3px 3px 5px rgba(0, 0, 0, .8)
+
+        @include phone
+            font-size: 1.5rem
+
+        @include tablet
+            font-size: 3rem
+            margin-top: 30%
+
+    p
+        font-family: $font-rubik
+        text-shadow: 3px 3px 5px rgba(0, 0, 0, .8)
+
+.back
+    position: absolute
+    z-index: 1
+    top: 0
+    width: 100vw
+    height: 100vh !important 
+
+    @include phone
+        height: 100vh 
+
+.carousel-inner
+    height: 100%
+
+.carousel-caption
+    margin-bottom: 40vh
+
+.carousel-item
+    img
+        @include phone
+            height: 100vh
+        @include tablet
+            height: 100vh
+
+
+//CARROUSEL/////////////////////////////////////////////////////////////////////////
+
+.carousel-item
+    img
+        opacity: .8
+
+
+
+.col
+    height: 50vh
+
+    .card
+        height: 100%
+
+        img
+            height: 100%
+
+.card
+    img
+        width: 100%
+        height: 70% !important
+
+//POPULAR////////////////////////////////////////////////////////////////////////import css-variables from 
+.popular
+    margin-top: 30vh
+    height: 100vh
+    padding-left: 10%
+    padding-right: 10%
+
+    @include phone
+        height: fit-content
+        width: 100%
+        margin-top: 15%
+
+    @include tablet
+        margin-top: 70vh
+        height: fit-content
+
+    h2
+        color: $color-darkblue        
+
+    p
+        font-family: $font-rubik
+        color: $color-greylight 
+        margin-top: 2%        
+        width: 100%
+        
+
+    h5
+        color: transparent        
+        font-size: 1.5rem
+        font-weight: 400
+        position: absolute !important
+        bottom: 14%
+
+
+.card img
+    height: 100% !important
+
+.card-img-overlay
+    
+    p
+        color: transparent
+        position: absolute !important
+        bottom: 5%
+
+
+        &:before
+            content: url("../img/location 1.svg")
+            padding-right: 2%
+
+
+.popular__country:hover    
+        background-color: rgba(0, 0,0 ,.7 )
+
+        h5
+            color: #fff
+
+        p
+            color: #fff
+
+//OFFERS//////////////////////////////////////////////////////////////////////////////
+.offers
+    // margin-top: 300px  
+    padding: 0 10%
+    height: 100vh
+
+    @include phone
+        height: fit-content
+        margin-top: 5%
+
+    @include tablet
+        height: fit-content
+        margin-top: 5%
+
+    h2
+        color: $color-darkblue
+
+    p
+        font-family: $font-rubik
+        color: $color-greylight 
+        margin-top: 2%
+        
+
+.offers__des
+    background-color: $color-orangeligth
+    border: none
+    
+    img
+        width: 30%
+        height: 5% !important
+        margin-bottom: 1%
+
+    h5
+        color: $color-greylight
+
+    p
+        font-family: $font-rubik
+        font-weight: 300
+
+.offers__card
+    height: 80vh !important
+    border: none
+    
+
+.offers__price
+    display: flex
+    justify-content: space-between
+
+    p
+        color: $color-greylight
+
+        span
+            color: $color-orange
+            font-weight: 700
+            font-size: 1.2rem            
+
+    button
+        border: none
+        background-color: $color-orange
+        color: #fff
+        border-radius: 12px
+        padding: 2% 5%
+
+        a
+            color: #fff
+            text-decoration: none
+
+//BLOG/////////////////////////////////////////////////////////////////////////////////
+.blog
+    padding: 0 10%
+    height: 100vh
+    margin-top: 10vh
+
+    @include phone
+        height: fit-content
+
+    @include tablet
+        height: fit-content
+
+    p
+        font-family: $font-rubik
+        color: $color-greylight 
+        margin-top: 2%
+
+.blog__card
+    padding-left: 5%
+
+    h5
+        font-size: 2rem
+        line-height: 3rem
+        padding-top: 5%
+        padding-bottom: 5%
+
+    p
+        font-family: $font-rubik
+        line-height: 2rem
+
+.blog__read
+    color: $color-orange
+    text-decoration: none
+    font-weight: 600
+
+.blog__read:after
+    content: url("../img/Arrow 2.svg")
+    color: $color-orange
+    padding-left: 5%
+
+.blog__img
+    border: none
+
+
+//SECTION PLANER /////////////////////////////////////////////////////
+.planner
+    display: flex
+    width: 100vw
+    height: 100vh
+    padding-left: 10%
+    padding-right: 10%
+    margin-top: 10vh
+
+    @include phone
+        display: inline-block
+        height: 300%
+    
+    @include tablet
+        display: inline-block
+    
+
+    .planner__title
+        p
+            font-family: $font-rubik
+            color: $color-greylight
+
+    .planner__title
+        width: 20%
+
+        @include phone
+            width: 100%
+        @include tablet
+            width: 100%
+
+    .planner__imgs
+        display: flex
+        width: 80%
+        cursor: pointer
+
+        @include phone
+            display: inline-block
+
+        @include tablet
+            width: 100%
+            height: 100%
+            margin-top: 10%
+
+        .planner1
+            background-image: url("../img/tri_peru.jpg")            
+            @include planer     
+            @include phone
+                width: 120%
+                height: 60vh
+
+        .planner1-1
+            @include tablet
+                display: inline-block
+                text-align: center
+                width: 100%                        
+
+        .planner1-p
+            @include tablet
+                font-size: 1.3rem
+                                      
+        .planner1-2
+            @include tablet
+                display: inline-block   
+                position: absolute
+                bottom: 0
+                text-align: center                         
+
+        .planner2
+            background-image: url("../img/trip_egypt.jpg")
+            @include planer   
+            @include phone
+                width: 120%  
+                height: 60vh   
+
+        .planner2-1
+            @include tablet
+                display: inline-block
+                text-align: center
+                width: 100% 
+
+        .planner2-p
+            @include tablet
+                font-size: 1.3rem    
+        
+        .planner2-2
+            @include tablet
+                display: inline-block   
+                position: absolute
+                bottom: 0
+                text-align: center 
+
+        .planner3
+            background-image: url("../img/trip_london-eye.jpg")
+            @include planer  
+            @include phone
+                width: 120%  
+                height: 60vh    
+
+        .planner3-1
+            @include tablet
+                display: inline-block
+                text-align: center
+                width: 100% 
+
+        .planner3-p
+            @include tablet
+                font-size: 1.3rem   
+
+        .planner3-2
+            @include tablet
+                display: inline-block   
+                position: absolute
+                bottom: 0
+                text-align: center      
+
+        .planner4
+            background-image: url("../img/trip_moscow.jpg")
+            @include planer
+            @include phone
+                width: 120%
+                height: 60vh
+
+        .planner4-1
+            @include tablet
+                display: inline-block
+                text-align: center
+                width: 100% 
+
+        .planner4-p
+            @include tablet
+                font-size: 1.3rem
+
+        .planner4-2
+            @include tablet
+                display: inline-block   
+                position: absolute
+                bottom: 0
+                text-align: center 
+
+    button
+        border: none
+        background-color: $color-orange
+        color: #fff
+        border-radius: 12px
+        padding: 15px
+
+        @include phone
+            margin-bottom: 8vh
+            width: 80%
+            margin-left: 8%
+
+//NEWS///////////////////////////////////////////////
+
+.news
+    width: 70vw
+    margin-left: 15vw
+    margin-right: 15vw
+    height: 30vh
+    display: flex
+    border-radius: 15px
+    padding: 5%
+    margin-bottom: -5%
+    background-color: #fff !important
+    position: relative
+    z-index: 2
+    bottom: 0vh
+    box-shadow: 2px -2px 1px rgba(118,126 ,134 ,.2 )
+
+    @include phone
+        display: inline-block
+        border: 1px solid$color-greylight
+        width: 80%
+        height: fit-content
+        margin: 5% 0% 5% 10%
+        box-shadow: none
+
+    @include tablet
+        display: inline-block
+        padding-bottom: 0 !important
+        margin: 5% 0% 0% 10%
+        border: 1px solid $color-greylight   
+        width: 80% 
+        height: fit-content   
+        box-shadow: none       
+
+    &__news
+        width: 35vw
+        color: $color-greylight
+        font-size: 3rem
+
+        @include phone
+            font-size: 2rem
+
+        @include tablet
+            width: 100%
+
+    &__mail
+
+        p
+            font-weight: 300
+            color: $color-greylight
+            font-family: $font-rubik
+        
+    &__input
+        display: flex
+        justify-content: space-between
+        width: 35vw
+
+        @include phone
+            display: inline-block
+
+        @include tablet
+            width: 100%
+            margin: 0   
+            padding-bottom: 5%        
+
+        input
+            border: none !important
+            background-color: $color-orangeligth        
+            border-radius: 15px
+            padding: 3%
+            margin-right: 10%
+            width: 70%
+
+            @include phone
+                width: 160%
+                margin: 0 8% 3% 10%
+                padding: 5%
+                padding: 15px
+        
+
+        button
+            border: none
+            background-color: $color-orange
+            color: #fff
+            border-radius: 10px
+            padding: 15px
+            width: 30%
+
+            @include phone
+                width: 160%
+                margin: 10% 8% 3% 10%               
+
+
+//Gallery///////////////////////////////////////////////////////import css-variables from 
+.gallery
+    width: 100vw
+    height: 100vh
+    padding: 0 10%
+
+    @include phone
+        height: fit-content
+
+    @include tablet
+        height: fit-content
+
+    h2
+        color: $color-darkblue
+
+    p
+        font-family: $font-rubik
+        color: $color-greylight 
+        margin-top: 2%
+
+.gallery__img
+    display: flex
+    justify-content: space-between
+    
+    @include phone
+        display: inline-block
+        width: 100%
+        height: fit-content
+        padding: 0
+
+    div
+        width: 22%
+        height: 100%
+        border-radius: 12px     
+
+        @include phone                
+                width: 80%  
+                height: fit-content
+                margin-bottom: 3%  
+
+        img
+            width: 19vw
+            height: 50vh
+            border-radius: 12px
+            box-shadow: 2px 2px 3px rgba(0,0 ,0 ,.8 )
+
+            @include phone
+                width: 80vw
+                
+            
+
+//FOOTER ///////////////////////////////////////////
+footer
+    width: 100vw
+    height: fit-content
+    background-color: $color-darkblue
+    display: flex
+    font-family: $font-rubik
+    color: #fff
+    padding: 10% 5% 5% 5%
+
+    @include phone
+        display: inline-block
+        height: fit-content
+        text-align: center
+
+    @include tablet
+        margin-top: 5%
+        padding: 10% 2% 5% 2%
+        height: fit-content
+
+    .footer__logo
+        width: 30%
+        display: flex
+        flex-direction: column
+        justify-content: center  
+
+        @include phone
+            width: 100%
+            justify-content: center
+            align-items: center
+
+        @include tablet
+            width: 25%   
+               
+
+        img
+            height: 100%
+            width: 50%
+            justify-content: center
+
+        @include tablet
+            height: 50%
+            width: 25%
+            
+        p
+            margin-top: 10%
+
+    .footer__menu
+        @include footerlist
+        @include tablet 
+            width: 27%
+            padding-left: 2%   
+        @include phone
+            width: 100%
+                
+       
+       
+    .footer__info
+        @include footerlist
+        @include phone
+            width: 100%
+        @include tablet
+            width: 30%
+        
+    .footer__contact
+        display: flex
+        flex-direction: column
+        
+        p
+            margin-bottom: 5%
+            font-weight: bold
+
+        a
+            text-decoration: none
+            color: #fff
+            margin: 5% 0%
+
+        @include tablet
+            width: 20%
+
+    .footer__web
+        width: 30%
+        margin-left: 10%
+
+        @include phone
+            width: 100%
+            margin-left: 0
+
+        @include tablet
+            width: 15%
+            display: inline-block
+            
+
+        p
+            font-weight: bold
+        
+        img
+            padding-right: 5%        
